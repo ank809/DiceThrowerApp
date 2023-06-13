@@ -27,7 +27,10 @@ class _Roll_DiceState extends State<Roll_Dice> {
             child: Expanded(
               child: Column(
                 children:<Widget> [
-                  Text('Roll the dice given below ' , style: TextStyle(fontSize: 30.0),),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Text('Roll the dice and unveil its hidden number! ' , style: TextStyle(fontSize: 23.0, color: Colors.amber),),
+                  ),
                   SizedBox(height: 65.0),
                   TextButton(
                     onPressed: (){
@@ -41,7 +44,7 @@ class _Roll_DiceState extends State<Roll_Dice> {
                     ),
                     ),
                     SizedBox(height: 45.0,),
-                    BounceInUp(child: Text('The dice number is $dice_numbber',  style: TextStyle(fontSize: 32.0),)),
+                    BounceInUp(child: Text('The dice has made its decision:$dice_numbber',  style: TextStyle(fontSize: 25.0, color: Colors.amber),)),
                 ],
               ),
             ),
